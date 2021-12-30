@@ -1,38 +1,48 @@
-// import logo from './logo.svg';
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
+import Welcome from "./Welcome";
 
-class App extends React.Component {
+//-----------------------------------------------
+// ----Component funtional inside than App.js----
+//-----------------------------------------------
+// const Welcome = (props) => <h1>Welcome {props.name}</h1>;
+//----------------------------------------------------------
+
+//--------------------------------------------
+// ----Component Class inside than App.js ----
+//--------------------------------------------
+// class Welcome extends Component {
+// constructor(props){
+//   super(props);
+// }
+// render(){
+//   return <h1>Welcome {this.props.name}</h1>
+// }
+// }
+//------------------------------------------------------------
+
+// ----------------------------
+// ----With main Clases--------
+// ----------------------------
+class App extends Component {
   render() {
+    const names = ["Juan", "Pedro", "Carlos"];
     return (
       <div>
-        <h1>Mi primera aplicación</h1>
-        <p>Esta es mi primera aplicación en React, está padrísimo!</p>
+        {names.map((name) => (<Welcome name={name} />))}
       </div>
     );
   }
 }
+// ----------------------------
 
+// ----------------------------
+// -----With main Funcional----
+// ----------------------------
 // function App() {
 //   return (
-//     // <div className="App">
-//     //   <header className="App-header">
-//     //     <img src={logo} className="App-logo" alt="logo" />
-//     //     <p>
-//     //       Edit <code>src/App.js</code> and save to reload.
-//     //     </p>
-//     //     <a
-//     //       className="App-link"
-//     //       href="https://reactjs.org"
-//     //       target="_blank"
-//     //       rel="noopener noreferrer"
-//     //     >
-//     //       Learn React
-//     //     </a>
-//     //   </header>
-//     // </div>
-//     <h1>Hola Mundo</h1>
+//     <Welcome name="Juan"/>
 //   );
 // }
-
+// ----------------------------
 export default App;
