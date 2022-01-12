@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import Counter from "./Counter";
 import Welcome from "./Welcome";
 
 //-----------------------------------------------
@@ -29,7 +30,8 @@ class App extends Component {
     const names = ["Juan", "Pedro", "Carlos"];
     return (
       <div>
-        {names.map((name) => (<Welcome name={name} />))}
+        {/* {names.map((name) => (<Welcome nombre={name} />))} */}
+        <Counter />
       </div>
     );
   }
