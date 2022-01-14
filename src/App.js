@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
 import Counter from "./Counter";
-import Welcome from "./Welcome";
+// import Welcome from "./Welcome";
+import react, {useState} from "react";
 
 //-----------------------------------------------
 // ----Component funtional inside than App.js----
@@ -25,6 +26,10 @@ import Welcome from "./Welcome";
 // ----------------------------
 // ----With main Clases--------
 // ----------------------------
+
+
+
+
 class App extends Component {
   render() {
     const names = ["Juan", "Pedro", "Carlos"];
